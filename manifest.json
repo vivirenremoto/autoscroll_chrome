@@ -1,0 +1,32 @@
+{
+    "name": "Autoscroll",
+    "version": "1.0",
+    "manifest_version": 2,
+    "description": "Autoscroll",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "browser_action": {
+        "default_title": "google.es"
+    },
+    "background": {
+        "scripts": [
+            "action.js"
+        ]
+    },
+    "permissions": [
+        "*://*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "background.js"
+            ]
+        }
+    ]
+}
