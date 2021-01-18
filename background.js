@@ -1,15 +1,18 @@
 // iniciar variables
-var interval_time = 1; // 1000 == 1 seg
+var interval_time = 20; // milisegundos (1000 == 1 seg)
+var start_scroll = 4; // segundos
 var timer_scroll;
 
 // scroll automatico al cargar la página
-window.onload = function () {
+setTimeout(function () {
     timer_scroll = setInterval(function () {
         var scroll_position = window.pageYOffset;
+
         scroll_position++;
         window.scrollTo(0, scroll_position);
     }, interval_time);
-};
+
+}, (start_scroll * 1000));
 
 
 // desactivar el javascript cuando se llega al final de la página
